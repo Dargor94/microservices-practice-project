@@ -2,9 +2,11 @@ server:
   port: 9000
   servlet:
     context-path: /api
-    
-    
+
+#logging:
+#  level: debug
+
 host:
   url: localhost:9001/ms
   path: 
-    message: /getMessage
+    message: /hello/getMessage

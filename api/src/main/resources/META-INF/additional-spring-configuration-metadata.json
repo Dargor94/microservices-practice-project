@@ -4,5 +4,10 @@
       "name": "host.path.message",
       "type": "java.lang.String",
       "description": "Description for host.path.message."
-  }
-] }
+    },
+    {
+      "name": "host.url",
+      "type": "java.lang.String",
+      "description": "Description for host.url."
+    }
+  ] }
