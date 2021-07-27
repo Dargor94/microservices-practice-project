@@ -3,5 +3,6 @@ server:
   servlet:
     context-path: /ms
 
-#logging:
-#  level: debug
+logging:
+  level:
+    org.springframework.security: DEBUG

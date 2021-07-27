@@ -1,12 +1,17 @@
 server:
-  port: 9000
+  port: 9002
   servlet:
     context-path: /api
 
-#logging:
-#  level: debug
+jwt:
+  header: Authorization
+  secret: my-secret-key
+
+logging:
+  level:
+    org.springframework.security: DEBUG
 
 host:
   url: localhost:9001/ms
-  path: 
+  path:
     message: /hello/getMessage
