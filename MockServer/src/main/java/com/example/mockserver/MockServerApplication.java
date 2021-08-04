@@ -1,20 +1,18 @@
-package com.globant.api;
+package com.example.mockserver;
 
-import com.globant.api.securityConfig.JwtTokenFilter;
+import com.example.mockserver.securityConfig.JwtTokenFilter;
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableFeignClients
-public class ApiApplication {
+public class MockServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiApplication.class, args);
-        MockServer mockServer = new MockServer();
-        mockServer.expectations();
+        SpringApplication.run(MockServerApplication.class, args);
+        //MockServer mockServer = new MockServer();
+        // mockServer.expectations();
 
         Flyway flyway = Flyway
                 .configure()
@@ -28,6 +26,4 @@ public class ApiApplication {
     JwtTokenFilter jwtTokenFilter() {
         return new JwtTokenFilter();
     }
-
-
 }
